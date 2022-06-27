@@ -1,4 +1,8 @@
-# Breadth First Search
+## EX NO : 02
+## DATE : 28-04-2022
+# <p align="center">Breadth First Search</p>
+
+
 ## AIM
 
 To develop an algorithm to find the route from the source to the destination point using breadth-first search.
@@ -24,17 +28,17 @@ Pass the required location it will return the distance and destination.
 
 
 
-## ROUTE MAP
+## <br/><br/><br/><br/><br/>ROUTE MAP
 
-![a](https://user-images.githubusercontent.com/75264748/167461272-ff4f76e5-c42e-4ed3-88e0-ea647f24d8e6.jpg)
 
+![ai1](https://user-images.githubusercontent.com/75235789/166147843-ff5c2518-cadc-479d-9905-41f698f9b7c7.png)
 
 
 
 ## PROGRAM
 ```
-Student name : kirshna moorthy
-Reg.no : 2122202300025
+Student name : Krishna moorthy S
+Reg.no : 212220230025
 ```
 ```python
 %matplotlib inline
@@ -164,20 +168,21 @@ def multimap(pairs) -> dict:
        result[key].append(val)
    return result
    
-Thiruthani_to_SaveethaMedical = Map(
-    {('tiruttani', 'arcord'):  12, ('arcord', 'Narayanapuram'): 15, ('Narayanapuram', 'Tirupachru'):31, ('Tirupachru', 'kadambathur'): 5, ('Tirupachru', 'veera ragava perumal  kovil'): 3, 
-     ('veera ragava perumal  kovil', 'tiruvallur'): 3, ('tiruvallur', 'veppambaattu'):  13, ('tiruvallur', 'kadambathur'): 7, ('kadambathur', 'manaur'): 8, ('manaur', 'arakkonam'): 17, 
-     ('arakkonam', 'itchiputhur'): 9, ('itchiputhur', 'tiruttani'):  6, ('arakkonam', 'Bangamainkadi'): 12, ('Bangamainkadi', 'pichipakkam'): 13,
-    ('pichipakkam', 'koolangeri'): 10, ('koolangeri', 'Sengadu'):  9, ('Sengadu', 'valarpuram'): 8, ('valarpuram', 'perumalppattu'): 15, ('perumalppattu', 'tiruvallur'): 10, 
-    ('valarpuram', 'Saveetha Medical College'): 8, ('Saveetha Medical College', 'poonamalle'):  10, ('poonamalle', 'Aavadi'): 10, ('Aavadi', 'veppambaattu'): 12, 
-   })
+
+krishnakiri_to_vellore = Map(
+    {('Krishnagiri', 'Burgur'):  16, ('Burgur', 'Natrampalli'): 21, ('Burgur', 'Thirupathur'):31, ('Natrampalli', 'Thekupattu'): 8, ('Thekupattu', 'Vaniyampadi'): 6, 
+     ('Thirupathur', 'Jolarpett'): 8, ('Jolarpett', 'Vaniyampadi'):  11, ('Vaniyampadi', 'Meisannapo'): 12, ('Vaniyampadi', 'aambur'): 18, ('aambur', 'Kilmurungai'): 9, 
+     ('Kilmurungai', 'Madhanur'): 9, ('Madhanur', 'Pallikonda'):  11, ('Meisannapo', 'Oomerabad'): 13, ('Oomerabad', 'Gudiyatham'): 30,
+    ('Gudiyatham', 'Pallikonda'): 12, ('Pallikonda', 'Kalanipakkam'):  5, ('Kalanipakkam', 'Tharvazhi'): 6, ('Thirupathur', 'Mettur'): 21, ('Mettur', 'Alangayam'): 9, 
+    ('Alangayam', 'Odugathur'): 23, ('Odugathur', 'Kovindpattamkottai'):  9, ('Kovindpattamkottai', 'Tharvazhi'): 12, ('Tharvazhi', 'Poigai'): 16, ('Tharvazhi', 'Vellore'): 16,
+    ('Kalanipakkam', 'Poigai'): 11, ('Poigai', 'Vellore'): 17,})
 
 
-r0 = RouteProblem('tiruttani', 'Saveetha Medical College', map=Thiruthani_to_SaveethaMedical)
-r1 = RouteProblem('koolangeri', 'tiruvallur', map=Thiruthani_to_SaveethaMedical)
-r2 = RouteProblem('tiruvallur', 'arakkonam', map=Thiruthani_to_SaveethaMedical)
-r3 = RouteProblem('arcord', 'Narayanapuram', map=Thiruthani_to_SaveethaMedical)
-r4 = RouteProblem('pichipakkam', 'manaur', map=Thiruthani_to_SaveethaMedical)
+r0 = RouteProblem('Vaniyampadi', 'Pallikonda', map=krishnakiri_to_vellore)
+r1 = RouteProblem('Krishnagiri', 'aambur', map=krishnakiri_to_vellore)
+r2 = RouteProblem('Thirupathur', 'Vellore', map=krishnakiri_to_vellore)
+r3 = RouteProblem('Burgur', 'Vaniyampadi', map=krishnakiri_to_vellore)
+r4 = RouteProblem('Pallikonda', 'Thirupathur', map=krishnakiri_to_vellore)
 
 
 
@@ -206,14 +211,12 @@ print("\n\nGoalStateWithPath:{0}".format(goal_state_path))
 print(path_states(goal_state_path) )
 print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
 
-
 ```
 
 
 ## OUTPUT:
 
-![a2](https://user-images.githubusercontent.com/75264748/167461189-aa4cd61f-3c67-4e6a-a603-58c277531a9e.jpg)
-
+![aii](https://user-images.githubusercontent.com/75235789/166147747-ff8a912a-38d6-4409-a3fc-b324f1511be3.jpg)
 
 
 ## SOLUTION JUSTIFICATION:
